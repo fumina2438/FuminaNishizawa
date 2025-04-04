@@ -111,7 +111,6 @@ public class hw {
             	System.out.println("NG");//NGの場合の表示
             }
             System.out.println(result);//表示
-            
             String text = "私はJavaが好きです。Javaは楽しい！";//文章を表示
             String replacedText =text.replace("Java","Python");//()の中を置き換えて表示
             System .out .println(replacedText);//表示
