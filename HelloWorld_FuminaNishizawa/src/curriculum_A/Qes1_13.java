@@ -102,7 +102,7 @@ public class Qes1_13 {
 		height = 165;
 		boolean iscorrect= (age >= 25) || (height >= 160);
 		System.out.println(iscorrect);
-		
+		//【年齢・身長】で【年齢が25もしくは身長が160以上】であればtrueを出力
 	}
 
 }
