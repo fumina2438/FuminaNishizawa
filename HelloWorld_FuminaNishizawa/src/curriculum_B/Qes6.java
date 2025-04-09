@@ -22,7 +22,7 @@ public class Qes6 {
 
 			//拡張for内でSwitch文使用
 			switch (trimmed) {
-			
+
 			//商品名に応じて処理を分岐
 			case "テレビ":
 			case "ディスプレイ":
@@ -35,13 +35,13 @@ public class Qes6 {
 			case "扇風機":
 			case "洗濯機":
 			case "加湿器":
-				
+
 				//ランダムに０−11の在庫数を設定
 				int stock = rand.nextInt(12); //０−11
 				System.out.println(trimmed + "の残りの台数は" + stock + "台です");
 				break;
-           
-				//指定されていない商品名が入力された場合の処理
+
+			//指定されていない商品名が入力された場合の処理
 			default:
 				System.out.println("『" + trimmed + "』は指定の商品ではありません");
 
