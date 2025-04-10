@@ -4,7 +4,7 @@ public class Qes1_13 {
 
 	public static void main(String[] args) {
 		// TODO 自動生成されたメソッド・スタブ
-		
+
 		byte myByte;//バイト型のローカル変数
 		short myshort;//短整数型のローカル変数
 		int myint;//整数型のローカル変数
@@ -14,17 +14,17 @@ public class Qes1_13 {
 		char mychar;//文字型のローカル変数
 		String mystring;//文字列型のローカル変数
 		boolean myboolean;//ブーリアン型のローカル変数
-		
-		myByte =0;
-		myshort =0;
+
+		myByte = 0;
+		myshort = 0;
 		myint = 0;
 		mylong = 0L;
-		mydouble =0.0;
-		mychar ='\u0000';
-		mystring =null;
-		myboolean =false;
+		mydouble = 0.0;
+		mychar = '\u0000';
+		mystring = null;
+		myboolean = false;
 		//それぞれの初期値代入して初期化
-		
+
 		myByte = 10;//10を代入
 		myshort = 100;//100を代入
 		myint = 1000;//1000を代入
@@ -34,73 +34,98 @@ public class Qes1_13 {
 		mychar = 'a';//aを代入
 		mystring = "ハロー";//ハローを代入
 		myboolean = true;//trueを代入
-		
-		System.out.println(myByte*myshort*myint*mylong);//11110の変数を出力
-		System.out.println(myByte*myByte);//20の変数を出力
-		System.out.println(mychar + mystring+ myboolean);//aハローtrueの変数を出力
-		int[]numbers = {1,1,1,3,0};//11130の数字を全て足す
-		int sum =6;//その合計は６
-		System.out.println(myByte*myshort*myint*mylong);//小数点以外の数字を全てかける
-		double result = mydouble/myshort;//10.5割る100をする
+
+		long number = myByte + myshort + myint + mylong;
+		System.out.println(number);//11110の変数を出力
+		int number1 = myByte + myByte;
+		System.out.println(number1);//20の変数を出力
+		System.out.println(mychar + mystring + myboolean);//aハローtrueの変数を出力
+		long numbers = (number + number1);//11130の数字を全て足す
+		System.out.println(numbers);
+		System.out.println(myByte * myshort * myint * mylong);//小数点以外の数字を全てかける
+		double result = mydouble / myshort;//10.5割る100をする
 		System.out.println(result);//その結果
-		result = myByte -myshort;//10引く100をする
-		System.out.println(result);//その結果
-		
+		result = myByte - myshort;//10引く100をする
+		System.out.println((int) result);//その結果
+
 		String num = "4";
 		String num1 = "3";
-		System.out.println(mystring + "JAVA" + (num+num1));//ハローJAVA43と表示させる
-		
-		String name ="山田太郎";//名前を代入
+		System.out.println(mystring + "JAVA" + (num + num1));//ハローJAVA43と表示させる
+
+		String name = "山田太郎";//名前を代入
 		System.out.println("「初めまして" + name + "です」");
 		int age = 18;//年齢を代入
 		System.out.println("「年齢は" + age + "歳です」");
-		double height =170.5;//身長を代入
-		System.out.println("「身長は"+ height + "cmです」");
-		float weight =62.2f;//体重を代入
+		double height = 170.5;//身長を代入
+		System.out.println("「身長は" + height + "cmです」");
+		float weight = 62.2f;//体重を代入
 		System.out.println("「体重は" + weight + "kgです」");
-		String favoritefood="寿司";//好きな食べ物を代入
-		System.out.println("「好きな食べ物は" + favoritefood +"です」");
-		double bim = weight / (height * height);//BIMを代入
-		System.out.println("「BMIは" + bim + "です」");
-		
-		name ="鈴木一郎";//名前を代入
+		String favoritefood = "寿司";//好きな食べ物を代入
+		System.out.println("「好きな食べ物は" + favoritefood + "です」");
+
+		// 身長をmに変換（cm ÷ 100）
+		double centimeterToMeter = 100.0;
+		double heightInMeter = height / centimeterToMeter;
+
+		// BMIの計算
+		double bmi = weight / (heightInMeter * heightInMeter);
+
+		// BMIを小数第1位で四捨五入して表示(BMI21.4)
+		System.out.println("「BMIは" + String.format("%.1f", bmi) + "です」");
+
+		name = "鈴木一郎";//名前を代入
 		System.out.println("「初めまして" + name + "です」");
-		age =24;//年齢を代入
+		age = 24;//年齢を代入
 		System.out.println("「年齢は" + age + "歳です」");
-		height =168.5;//身長を代入
-		System.out.println("「身長は"+ height + "cmです」");
-		weight =64.2f;//体重を代入
+		height = 168.5;//身長を代入
+		System.out.println("「身長は" + height + "cmです」");
+		weight = 64.2f;//体重を代入
 		System.out.println("「体重は" + weight + "kgです」");
-		favoritefood ="オムライス";//好きな食べ物を代入
-		System.out.println("「好きな食べ物は" + favoritefood +"です」");
-		bim=weight /(height*height);//BMIを代入
-		System.out.println("「BMIは" + bim + "です」");
-		
+		favoritefood = "オムライス";//好きな食べ物を代入
+		System.out.println("「好きな食べ物は" + favoritefood + "です」");
+		double heightInMeter1 = height / 100.0; // cmをmに変換
+		double bmi1 = weight / (heightInMeter1 * heightInMeter1); // BIMを代入(BMI22.6)
+		System.out.println("「BMIは" + String.format("%.1f", bmi1) + "です」");
+
+		System.out.println();//改行
+
 		age = age + 24;//和算で自己代入２４を足す
 		System.out.println("「年齢は" + age + "歳です」");//結果４８
 		height = height + 168.5;
-		System.out.println("「身長は"+ height + "cmです」");
-		weight =weight + 64.2f;
+		System.out.println("「身長は" + height + "cmです」");
+		weight = weight + 64.2f;
 		System.out.println("「体重は" + weight + "kgです」");
-		
+		// 身長をmに変換（cm ÷ 100）
+		double centimeterToMeter1 = 100.0;
+		double heightInMeter2 = height / centimeterToMeter1;
+
+		// BMIの計算
+		double bmi2 = weight / (heightInMeter2 * heightInMeter2);
+
+		// BMIを小数第1位で四捨五入して表示
+		System.out.println("「BMIは" + String.format("%.2f", bmi2) + "です」");
+
 		age = 26;
-		boolean isAdult =age >=25;//25際以上なら
+		boolean isAdult = age >= 25;//25際以上なら
 		System.out.println(isAdult);//結果２５歳以上がtrue
-		
-		String total =String.valueOf(age) + "歳"
-		              +String.valueOf(height) + "cm,"
-		              +String.valueOf(weight) + "kg";
-		System.out.println(total);
+
+		age = 24;//年齢を代入
+		height = 168.5;//身長を代入
+		weight = 64.2f;//体重を代入
+		String Sage = String.valueOf(age);
+		String Sheight = String.valueOf(height);
+		String Sweight = String.valueOf(weight);
+
+		System.out.println(Sage + Sheight + Sweight);
 		//年齢、身長、体重を文字列型に形変換し繋げて出力
-	
-		age =Integer.parseInt(total);
-		height = Integer.parseInt(total);
-		System.out.println(age + height);
+
+		age = Integer.parseInt(Sage);
+		height = Double.parseDouble(Sheight);
+		System.out.println(age);
+		System.out.println(height);
 		//文字列型を整数型に変換して出力
-		
-		age = 24;
-		height = 165;
-		boolean iscorrect= (age >= 25) || (height >= 160);
+
+		boolean iscorrect = (age == 25) || (height >= 160);
 		System.out.println(iscorrect);
 		//【年齢・身長】で【年齢が25もしくは身長が160以上】であればtrueを出力
 	}
