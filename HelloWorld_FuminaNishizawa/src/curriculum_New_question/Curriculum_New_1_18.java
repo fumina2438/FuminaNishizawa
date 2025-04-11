@@ -12,7 +12,7 @@ public class Curriculum_New_1_18 {
 		greetJavaSE("Java", 11);
 	}
 
-	//Q2整数の配列を受け取り、その要素を順番にコンソールに出力するメソッド。
+	//Q2 整数の配列を受け取り、その要素を順番にコンソールに出力するメソッド。
 	public static void printArray(int[] numbers) {
 		for (int number : numbers) {// 配列の要素を1つずつ取り出して表示
 			System.out.println(number);
