@@ -98,4 +98,15 @@ public class Curriculum_New_1_18 {
 		printAverage(result); // 平均値を出力
 		checkOver50(result); // 各値が50以上かを出力
 	}
+
+	public static void main6(String[] args) {
+		// すべての処理をここから呼び出す（唯一の main メソッド）
+		greetJavaSE("Java", 11);
+		int[] nums = { 1, 2, 3 };
+		printArray(nums);
+		printArray(3.14, 2.71);
+		int[] random = generateRandomNumbers(5);
+		printAverage(random);
+		checkOver50(random);
+	}
 }
