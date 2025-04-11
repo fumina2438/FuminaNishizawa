@@ -8,35 +8,17 @@ public class Curriculum_New_1_18 {
 		System.out.println("Hello" + language + "SE" + version);
 	}
 
-	public static void main(String[] args) {
-		greetJavaSE("Java", 11);
-	}
-
 	//Q2 整数の配列を受け取り、その要素を順番にコンソールに出力するメソッド。
 	public static void printArray(int[] numbers) {
 		for (int number : numbers) {// 配列の要素を1つずつ取り出して表示
 			System.out.println(number);
-		}
-	}
 
-	//Q3 動作確認用の main メソッド
-	public static void main1(String[] args) {
-		int[] sampleArray = { 1, 2, 3, 4, 5 };
-		printArray(sampleArray);//メソッドを呼び出して配列の中身を出力
+		}
 	}
 
 	//Q4
 	public static void printArray(double num1, double num2) {
 		System.out.printf("%.2f + %.2f = %.2f%n", num1, num2, num1 + num2);
-	}
-
-	public static void main2(String[] args) {
-		int[] intArray = { 1, 2, 3 };
-		printArray(intArray);
-
-		double doubleNum1 = 3.14;
-		double doubleNum2 = 2.71;
-		printArray(doubleNum1, doubleNum2);
 	}
 
 	//Q5 1〜100までのランダムな整数
@@ -58,17 +40,8 @@ public class Curriculum_New_1_18 {
 		return numbers;// 最終的な配列を返す
 	}
 
-	public static void main3(String[] args) {
-		//ランダムな数を5個生成して出力＆取得
-		var result = generateRandomNumbers(5);
-	}
-
 	//Q6
-	public static void printAverage(int[] numbers) {// 配列が空の場合はメッセージを出力して処理を終了
-		if (numbers.length == 0) {
-			System.out.println("配列が空です。");
-			return;
-		}
+	public static double printAverage(int[] numbers) {// 配列が空の場合はメッセージを出力して処理を終了
 
 		double sum = 0;// 合計値を格納する変数
 		for (int num : numbers) {
@@ -77,11 +50,7 @@ public class Curriculum_New_1_18 {
 
 		double average = sum / numbers.length;// 平均値を計算（double型で小数点以下も保持）
 		System.out.println("平均値: " + average); //平均値をコンソールに出力
-	}
-
-	public static void main4(String[] args) {
-		int[] result = generateRandomNumbers(5); // ランダム値を5個生成
-		printAverage(result); // 平均値を出力
+		return average;
 	}
 
 	//Q7各要素が50以上か判定し、true/falseを出力するメソッド
@@ -92,21 +61,16 @@ public class Curriculum_New_1_18 {
 		}
 	}
 
-	// ④ メインメソッド
-	public static void main5(String[] args) {
-		int[] result = generateRandomNumbers(5); // ランダムに5個生成
-		printAverage(result); // 平均値を出力
-		checkOver50(result); // 各値が50以上かを出力
-	}
-
-	public static void main6(String[] args) {
-		// すべての処理をここから呼び出す（唯一の main メソッド）
+	public static void main(String[] args) {
 		greetJavaSE("Java", 11);
-		int[] nums = { 1, 2, 3 };
-		printArray(nums);
-		printArray(3.14, 2.71);
-		int[] random = generateRandomNumbers(5);
-		printAverage(random);
-		checkOver50(random);
+		int[] sampleArray = { 1, 2, 3, 4, 5 };//Q3 動作確認用の main メソッド
+		printArray(sampleArray);//メソッドを呼び出して配列の中身を出力
+
+		double doubleNum1 = 3.14;
+		double doubleNum2 = 2.71;
+		printArray(doubleNum1, doubleNum2);
+		int[] result = generateRandomNumbers(5); // ランダム値を5個生成
+		double average = printAverage(result); // 平均値を出力
+		checkOver50(result); // 各値が50以上かを出力、 メインメソッド
 	}
 }
