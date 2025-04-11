@@ -60,11 +60,13 @@ public class Curriculum_New_1_18 {
 			System.out.println(num + " は50以上か？ → " + isOver50);// 判定結果をコンソールに出力
 		}
 	}
+
 	// 平均値が50以上かどうか判定
 	public static void checkOver50(double average) {
-	    boolean isOver50 = average >= 50;
-	    System.out.println("平均値 " + average + " は50以上か？ → " + isOver50);
+		boolean isOver50 = average >= 50;
+		System.out.println("平均値 " + average + " は50以上か？ → " + isOver50);
 	}
+
 	public static void main(String[] args) {
 		greetJavaSE("Java", 11);
 		int[] sampleArray = { 1, 2, 3, 4, 5 };//Q3 動作確認用の main メソッド
