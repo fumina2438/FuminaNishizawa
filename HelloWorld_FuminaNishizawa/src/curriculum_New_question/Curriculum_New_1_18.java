@@ -60,7 +60,11 @@ public class Curriculum_New_1_18 {
 			System.out.println(num + " は50以上か？ → " + isOver50);// 判定結果をコンソールに出力
 		}
 	}
-
+	// 平均値が50以上かどうか判定
+	public static void checkOver50(double average) {
+	    boolean isOver50 = average >= 50;
+	    System.out.println("平均値 " + average + " は50以上か？ → " + isOver50);
+	}
 	public static void main(String[] args) {
 		greetJavaSE("Java", 11);
 		int[] sampleArray = { 1, 2, 3, 4, 5 };//Q3 動作確認用の main メソッド
@@ -71,6 +75,6 @@ public class Curriculum_New_1_18 {
 		printArray(doubleNum1, doubleNum2);
 		int[] result = generateRandomNumbers(5); // ランダム値を5個生成
 		double average = printAverage(result); // 平均値を出力
-		checkOver50(result); // 各値が50以上かを出力、 メインメソッド
+		checkOver50(average); // 各値が50以上かを出力、 メインメソッド
 	}
 }
