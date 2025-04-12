@@ -18,16 +18,11 @@ public class Dog {
 
 	// 名前を取得するメソッド
 	public String getName() {
-		return null;
+		return this.name;
 	}
 
-	// 動物の数を取得する静的メソッド
-	public void setCount(int count) {
-		this.count = count;
-	}
-
-	public static String getCount() {
+	public int getCount() {
 		// TODO 自動生成されたメソッド・スタブ
-		return null;
+		return this.count;
 	}
 }
