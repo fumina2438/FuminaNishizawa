@@ -6,6 +6,7 @@ public class Zoo {
 	private int speed;
 	private String scientificName;
 
+	
 	//コンストラクタ
 	public Zoo(String name, double length, int speed, String scientificName) {
 		this.name = name;
