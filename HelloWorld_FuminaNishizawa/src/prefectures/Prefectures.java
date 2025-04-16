@@ -4,7 +4,7 @@ package prefectures;
 public class Prefectures {
 	private String name;//都道府県名
 	private String capital;//県庁所在地
-	private int area;//面積
+	private double area;//面積
 
 	//コンストラクタ：prefectureのオブジェクトを生成
 	public Prefectures(String name, String capital, int area) {
@@ -21,7 +21,7 @@ public class Prefectures {
 		return capital;
 	}
 
-	public int getArea() {//面積を取得
+	public double getArea() {//面積を取得
 		return area;
 	}
 
@@ -30,5 +30,6 @@ public class Prefectures {
 		System.out.println("都道府県名:" + name);
 		System.out.println("県庁所在地:" + capital);
 		System.out.println("面積:" + area + "km\2");
+		System.out.println();
 	}
 }
